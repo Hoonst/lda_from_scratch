@@ -1,3 +1,13 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+from tqdm.notebook import tqdm
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import CountVectorizer
+
+import random
+import pickle
+
 class LDA:
     def __init__(self, data, n_samples = 1000, T = 10, iterate = 10, n_top_words = 10):
         self.data = data
